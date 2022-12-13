@@ -13,11 +13,17 @@ export type BlockOptions = {
     [property: string]: any;
 }
 
+export type StateOptions = {
+    state: number;
+    attributes: BlockOptions,
+    onSet: method
+}
+
 export declare class Block extends Object3D {
     constructor(options: BlockOptions);
-    setupState(): void;
-    setState(): void;
-
+    setupState(StateOptions): void;
+    setState(state: string): void;
+    add(...args: any[]): any;
 }
 
 export type TextOptions = {
@@ -36,6 +42,9 @@ export type InlineBlockOptions = {
 
 export declare class InlineBlock extends Object3D {
     constructor(options: InlineBlockOptions);
+    setupState(StateOptions): void;
+    setState(state: string): void;
+    add(...args: any[]): any;
 }
 
 export type KeyboardOptions = {
