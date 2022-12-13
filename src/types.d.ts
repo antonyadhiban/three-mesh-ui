@@ -1,8 +1,8 @@
 import type {Color, Object3D} from "three";
 
 export type BlockOptions = {
-    width: number;
-    height: number;
+    width?: number;
+    height?: number;
     padding?: number;
     fontFamily?: string;
     fontTexture?: string;
@@ -15,6 +15,9 @@ export type BlockOptions = {
 
 export declare class Block extends Object3D {
     constructor(options: BlockOptions);
+    setupState(): void;
+    setState(): void;
+
 }
 
 export type TextOptions = {
