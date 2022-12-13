@@ -3135,9 +3135,6 @@ class Frame extends external_three_namespaceObject.Mesh {
 
 		super( geometry, material );
 
-		this.castShadow = true;
-		this.receiveShadow = true;
-
 		this.name = 'MeshUI-Frame';
 
 	}
